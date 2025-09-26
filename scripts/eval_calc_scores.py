@@ -24,7 +24,8 @@ import os
 import time
 import argparse
 
-from bop_toolkit_lib import config
+# from bop_toolkit_lib import config
+from config import Config
 from bop_toolkit_lib import dataset_params
 from bop_toolkit_lib import inout
 from bop_toolkit_lib import misc
@@ -36,6 +37,8 @@ file_name = os.path.splitext(os.path.basename(__file__))[0]
 logger = misc.get_logger(file_name)
 # PARAMETERS (can be overwritten by the command line arguments below).
 ################################################################################
+config = Config()
+
 p = {
     # Threshold of correctness for different pose error functions.
     "correct_th": {

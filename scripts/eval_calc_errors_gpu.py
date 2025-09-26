@@ -10,7 +10,8 @@ import copy
 import numpy as np
 
 
-from bop_toolkit_lib import config
+# from bop_toolkit_lib import config
+from config import Config
 from bop_toolkit_lib import dataset_params
 from bop_toolkit_lib import inout
 from bop_toolkit_lib import misc
@@ -28,6 +29,8 @@ except ImportError as e:
 
 # PARAMETERS (can be overwritten by the command line arguments below).
 ################################################################################
+config = Config()
+
 p = {
     # Top N pose estimates (with the highest score) to be evaluated for each
     # object class in each image.

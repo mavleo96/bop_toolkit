@@ -10,7 +10,8 @@ import multiprocessing
 import subprocess
 import numpy as np
 
-from bop_toolkit_lib import config
+# from bop_toolkit_lib import config
+from config import Config
 from bop_toolkit_lib import inout
 from bop_toolkit_lib import misc
 
@@ -20,6 +21,8 @@ logger = misc.get_logger(file_name)
 
 # PARAMETERS (some can be overwritten by the command line arguments below).
 ################################################################################
+config = Config()
+
 p = {
     # Errors to calculate.
     "errors": [
